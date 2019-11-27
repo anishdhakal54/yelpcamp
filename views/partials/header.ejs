@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Title</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+  <!-- Bootstrap CSS -->
+
+  <link rel="stylesheet" href="/css/style.css" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+</head>
+
+<body>
+  <!-- Nav tabs -->
+
+  <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+    <a class="navbar-brand" href="/campgrounds">YelpCamp</a>
+    <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId"
+      aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="collapsibleNavId">
+      <ul class="navbar-nav ml-auto">
+        <% if(!currentUser){%>
+        <li class="nav-item float-right">
+          <a class="nav-link" href="/login">Login</a>
+        </li>
+        <li class="nav-item float-right">
+          <a class="nav-link" href="/register">Sign up</a>
+        </li>
+        <% } else{%>
+        <li class="nav-item float-right">
+          <a class="nav-link" href="#">Signed In as:<%=currentUser.username%></a>
+        </li>
+        <li class="nav-item float-right">
+          <a class="nav-link" href="/logout">Logout</a>
+        </li>
+        <% }%>
+      </ul>
+    </div>
+  </nav>
+  <div class="container col-lg-4">
+    <% if(error && error.length>0){%>
+    <div class="alert alert-danger my-3" role="alert">
+      <%=error%>
+    </div>
+    <%}%>
+     <% if(success && success.length>0){%>
+
+    <div class="alert alert-success my-3" role="alert">
+      <%=success%>
+    </div>
+    <%}%>
+    </div>

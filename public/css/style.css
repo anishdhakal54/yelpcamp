@@ -1,0 +1,23 @@
+.thumbnail {
+  padding: 0;
+}
+.thumbnail img {
+  width: 100%;
+}
+
+.thumbnail .caption-full {
+  padding: 9px;
+}
+
+#deleteForm {
+  display: inline;
+}
+
+#deleteComment {
+  display: inline;
+}
+#footer {
+  color: white;
+  color: rgba(0, 0, 0, 0.5);
+  text-align: center;
+}

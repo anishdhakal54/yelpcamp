@@ -1,0 +1,19 @@
+<%include ../partials/header%>
+<div class="container-fluid">
+  <div class="card my-3 col-md-6 offset-2">
+    <div class="card-header">
+      <h3 class="text-center">Add New Comment to <%=campground.name%></h3>
+    </div>
+    <div class="card-body">
+      <form method="post" action="/campgrounds/<%=campground._id%>/comments">
+        <div class="form-group">
+          <label>Comment:</label>
+          <textarea type="text" name="comment[text]" class="form-control" placeholder="Comments"></textarea>
+        </div>
+        <button class="btn btn-success">Add Comment</button>
+        <a href="/campgrounds/<%=campground._id%>" class="btn btn-secondary">Go back</a>
+      </form>
+    </div>
+  </div>
+</div>
+<%include ../partials/footer%>
